@@ -172,7 +172,7 @@ export default function UberEats() {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                if (index === data.length) {
+                if (index === data.length - 1) {
                   return;
                 }
 
