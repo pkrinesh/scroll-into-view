@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 
-const { width, height } = Dimensions.get('screen');
+const { width } = Dimensions.get('screen');
 
 faker.seed(10);
 
@@ -51,10 +51,7 @@ export default function UberEats() {
         horizontal
         renderItem={({ item, index: fIndex }) => {
           return (
-            <TouchableOpacity
-              onPress={() => {
-                setIndex(fIndex);
-              }}>
+            <TouchableOpacity onPress={() => setIndex(fIndex)} >
               <View
                 style={{
                   marginRight: _spacing,
@@ -94,10 +91,7 @@ export default function UberEats() {
               width: width / 2,
               justifyContent: 'center',
             }}>
-            <TouchableOpacity
-              onPress={() => {
-                setViewPosition(0);
-              }}>
+            <TouchableOpacity onPress={() => setViewPosition(0)} >
               <View
                 style={{
                   padding: _spacing,
@@ -108,10 +102,7 @@ export default function UberEats() {
                 <Entypo name="align-left" size={24} color="#36303F" />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                setViewPosition(0.5);
-              }}>
+            <TouchableOpacity onPress={() => setViewPosition(0.5)} >
               <View
                 style={{
                   padding: _spacing,
@@ -126,10 +117,7 @@ export default function UberEats() {
                 />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                setViewPosition(1);
-              }}>
+            <TouchableOpacity onPress={() => setViewPosition(1)}>
               <View
                 style={{
                   padding: _spacing,
@@ -154,10 +142,7 @@ export default function UberEats() {
             }}>
             <TouchableOpacity
               onPress={() => {
-                if (index === 0) {
-                  return;
-                }
-
+                if (index === 0) return;
                 setIndex(index - 1);
               }}>
               <View
@@ -172,10 +157,7 @@ export default function UberEats() {
             </TouchableOpacity>
             <TouchableOpacity
               onPress={() => {
-                if (index === data.length - 1) {
-                  return;
-                }
-
+                if (index === data.length - 1) return;
                 setIndex(index + 1);
               }}>
               <View
